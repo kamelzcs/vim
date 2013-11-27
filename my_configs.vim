@@ -13,6 +13,9 @@ set clipboard=unnamedplus
 "tagbar appears on the left
 let g:tagbar_left=1
 
+"for esc
+imap jj <Esc>
+
 vmap <C-c> "+yp
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
@@ -21,10 +24,12 @@ nnoremap y "+y
 vnoremap y "+y
 nnoremap <F12> :TlistToggle<CR>
   
+let g:pymode_folding=0
+let g:NERDTreeWinPos = "right"
 
 set tags=./tags;/
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+map <Leader>vs :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 autocmd filetype python nnoremap <F5> : <C-U>!python % <CR>
 autocmd filetype c nnoremap <F5> :<C-U>make %:r && ./%:r<CR>

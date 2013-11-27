@@ -172,6 +172,7 @@ Bundle 'sigurdga/gnome-terminal-colors-solarized'
 
 Bundle 'Lokaltog/vim-easymotion'
 
+Bundle 'klen/python-mode'
 
 filetype plugin indent on     " required!
 
