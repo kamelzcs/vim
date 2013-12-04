@@ -1,4 +1,5 @@
 git clone https://github.com/kamelzcs/vim.git ~/.vim_runtime
+
 sh ~/.vim_runtime/my_install.sh
 # The Ultimate vimrc
 
