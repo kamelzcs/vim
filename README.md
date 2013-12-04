@@ -1,6 +1,7 @@
 git clone https://github.com/kamelzcs/vim.git ~/.vim_runtime
 
 sh ~/.vim_runtime/my_install.sh
+To config the python indent, edit the ~/.vim/bundle/python-mode/after/indent/python.vim: indentkeys No :,shiftwidth=2
 # The Ultimate vimrc
 
 Over the last 8 years I have used and tweaked Vim. This is my Ultimate vimrc.
