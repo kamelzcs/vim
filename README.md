@@ -1,3 +1,5 @@
+git clone https://github.com/kamelzcs/vim.git ~/.vim_runtime
+sh ~/.vim_runtime/my_install.sh
 # The Ultimate vimrc
 
 Over the last 8 years I have used and tweaked Vim. This is my Ultimate vimrc.
