@@ -164,7 +164,7 @@ Bundle 'altercation/vim-colors-solarized'
 
 "Bundle 'altercation/solarized'
 
-Bundle 'kevinw/pyflakes-vim'
+"Bundle 'kevinw/pyflakes-vim'
 
 Bundle 'Raimondi/delimitMate'
 
@@ -173,6 +173,8 @@ Bundle 'sigurdga/gnome-terminal-colors-solarized'
 Bundle 'Lokaltog/vim-easymotion'
 
 Bundle 'klen/python-mode'
+
+Bundle 'vim-scripts/YankRing.vim'
 
 filetype plugin indent on     " required!
 
