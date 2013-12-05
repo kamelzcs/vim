@@ -9,7 +9,7 @@ let g:solarized_termcolors=16
 colorscheme solarized
 
 set nu
-set clipboard=unnamed
+set clipboard=unnamedplus
 "tagbar appears on the left
 let g:tagbar_left=1
 
@@ -23,8 +23,8 @@ vmap <C-c> "+y
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
-nnoremap y "+y
-vnoremap y "+y
+"nnoremap y "+y
+"vnoremap y "+y
 nnoremap <F12> :TlistToggle<CR>
 "not auto folding
 let g:pymode_folding=0
