@@ -9,23 +9,28 @@ let g:solarized_termcolors=16
 colorscheme solarized
 
 set nu
-set clipboard=unnamedplus
+set clipboard=unnamed
 "tagbar appears on the left
 let g:tagbar_left=1
+
+"changed the ~/.vim/bundle/python-mode/after/indent/python.vim: indentkeys No :,shiftwidth=2
+"basic.vim cancled trailing space in python/coffe  deletion
 
 "for esc
 imap jj <Esc>
 
-vmap <C-c> "+yp
+vmap <C-c> "+y
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 nnoremap y "+y
 vnoremap y "+y
 nnoremap <F12> :TlistToggle<CR>
-  
+"not auto folding
 let g:pymode_folding=0
 let g:NERDTreeWinPos = "right"
+"not auto trail white spaces
+let g:pymode_utils_whitespaces=0
 
 set tags=./tags;/
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
@@ -34,6 +39,10 @@ map <Leader>vs :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 autocmd filetype python nnoremap <F5> : <C-U>!python % <CR>
 autocmd filetype c nnoremap <F5> :<C-U>make %:r && ./%:r<CR>
 autocmd filetype cpp nnoremap <F5> :<C-U>make %:r && ./%:r<CR>
+autocmd BufNewFile,BufRead *.py:
+    \ set softtabstop=2
+    \ set shiftwidth=2
+    \ set indentkeys=!^F,o,<>,O,0),0],0},=elif,=except
 set listchars=tab:>-,trail:-
 set list
 "This unsets the "last search pattern" register by hitting return
