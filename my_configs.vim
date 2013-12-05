@@ -23,8 +23,18 @@ vmap <C-c> "+y
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
+
+"command line past
+cmap <C-v> <C-R>"
 "nnoremap y "+y
 "vnoremap y "+y
+
+" Open ack and put the cursor in the right position
+map <leader>g :Ack  .<left><left>
+" ack in the current file
+map <leader><space> :Ack // <C-R>%<C-A><right><right><right><right><right><right><right><right><right>
+
+
 nnoremap <F12> :TlistToggle<CR>
 "not auto folding
 let g:pymode_folding=0
