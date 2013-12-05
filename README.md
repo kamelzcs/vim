@@ -3,6 +3,11 @@ git clone https://github.com/kamelzcs/vim.git ~/.vim_runtime
 sh ~/.vim_runtime/my_install.sh
 
 To config the python indent, edit the ~/.vim/bundle/python-mode/after/indent/python.vim: indentkeys No :,shiftwidth=2
+
+Used the ack to search and added the ,g shortcut in. To install the latest ack, should use http://packages.ubuntu.com/trusty/all/ack-grep/download source and http://beyondgrep.com/install/ 
+
+Added the ,g ack search shotcut and changed the switchbuf to not include the newtab
+
 # The Ultimate vimrc
 
 Over the last 8 years I have used and tweaked Vim. This is my Ultimate vimrc.
