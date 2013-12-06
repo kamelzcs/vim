@@ -1,12 +1,12 @@
-set runtimepath+=~/.vim_runtime
+set runtimepath+=~/vimConf
 
-source ~/.vim_runtime/vimrcs/basic.vim
-source ~/.vim_runtime/vimrcs/filetypes.vim
-source ~/.vim_runtime/vimrcs/plugins_config.vim
-source ~/.vim_runtime/vimrcs/extended.vim
+source ~/vimConf/vimrcs/basic.vim
+source ~/vimConf/vimrcs/filetypes.vim
+source ~/vimConf/vimrcs/plugins_config.vim
+source ~/vimConf/vimrcs/extended.vim
 
 try
-source ~/.vim_runtime/my_configs.vim
+source ~/vimConf/my_configs.vim
 catch
 endtry
 
@@ -175,6 +175,8 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'klen/python-mode'
 
 Bundle 'vim-scripts/YankRing.vim'
+
+Bundle 'mileszs/ack.vim'
 
 filetype plugin indent on     " required!
 

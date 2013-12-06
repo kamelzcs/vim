@@ -19,20 +19,20 @@ let g:tagbar_left=1
 "for esc
 imap jj <Esc>
 
-vmap <C-c> "+y
-vmap <C-x> "+c
-vmap <C-v> c<ESC>"+p
-imap <C-v> <ESC>"+pa
+"vmap <C-c> "+y
+"vmap <C-x> "+c
+"vmap <C-v> c<ESC>"+p
+"imap <C-v> <ESC>"+pa
 
-"command line past
-cmap <C-v> <C-R>"
+"command line paste
+cnoremap <C-v> <C-R>+
 "nnoremap y "+y
 "vnoremap y "+y
 
 " Open ack and put the cursor in the right position
 map <leader>g :Ack  .<left><left>
 " ack in the current file
-map <leader><space> :Ack // <C-R>%<C-A><right><right><right><right><right><right><right><right><right>
+map <leader><space> :Ack   <C-R>%<C-A><right><right><right><right>
 
 
 nnoremap <F12> :TlistToggle<CR>
@@ -49,10 +49,6 @@ map <Leader>vs :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 autocmd filetype python nnoremap <F5> : <C-U>!python % <CR>
 autocmd filetype c nnoremap <F5> :<C-U>make %:r && ./%:r<CR>
 autocmd filetype cpp nnoremap <F5> :<C-U>make %:r && ./%:r<CR>
-autocmd BufNewFile,BufRead *.py:
-    \ set softtabstop=2
-    \ set shiftwidth=2
-    \ set indentkeys=!^F,o,<>,O,0),0],0},=elif,=except
 set listchars=tab:>-,trail:-
 set list
 "This unsets the "last search pattern" register by hitting return

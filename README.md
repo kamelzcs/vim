@@ -8,6 +8,8 @@ Used the ack to search and added the ,g shortcut in. To install the latest ack, 
 
 Added the ,g ack search shotcut and changed the switchbuf to not include the newtab
 
+Exclude the tags from the ack serach
+
 # The Ultimate vimrc
 
 Over the last 8 years I have used and tweaked Vim. This is my Ultimate vimrc.
