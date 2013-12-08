@@ -1,6 +1,6 @@
-git clone https://github.com/kamelzcs/vim.git ~/.vim_runtime
+git clone https://github.com/kamelzcs/vim.git ~/vimConf
 
-sh ~/.vim_runtime/my_install.sh
+sh ~/vimConf/my_install.sh
 
 To config the python indent, edit the ~/.vim/bundle/python-mode/after/indent/python.vim: indentkeys No :,shiftwidth=2
 

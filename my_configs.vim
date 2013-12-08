@@ -9,7 +9,9 @@ let g:solarized_termcolors=16
 colorscheme solarized
 
 set nu
+set relativenumber
 set clipboard=unnamedplus
+
 "tagbar appears on the left
 let g:tagbar_left=1
 
