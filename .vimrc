@@ -178,6 +178,10 @@ Bundle 'vim-scripts/YankRing.vim'
 
 Bundle 'mileszs/ack.vim'
 
+Bundle 'tpope/vim-surround'
+
+Bundle 'rstacruz/sparkup'
+
 filetype plugin indent on     " required!
 
 "

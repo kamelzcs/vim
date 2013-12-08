@@ -23,8 +23,8 @@ imap jj <Esc>
 
 "vmap <C-c> "+y
 "vmap <C-x> "+c
-"vmap <C-v> c<ESC>"+p
-"imap <C-v> <ESC>"+pa
+vmap <C-v> c<ESC>"+p
+imap <C-v> <ESC>"+pa
 
 "command line paste
 cnoremap <C-v> <C-R>+
@@ -48,10 +48,12 @@ set tags=./tags;/
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <Leader>vs :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
+au FocusLost * :wa
 autocmd filetype python nnoremap <F5> : <C-U>!python % <CR>
 autocmd filetype c nnoremap <F5> :<C-U>make %:r && ./%:r<CR>
 autocmd filetype cpp nnoremap <F5> :<C-U>make %:r && ./%:r<CR>
-set listchars=tab:>-,trail:-
+"set listchars=tab:>-,trail:-
+set listchars=tab:>-,trail:-,extends:#,nbsp:.
 set list
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
