@@ -33,7 +33,7 @@ cnoremap <C-v> <C-R>+
 
 function! GetRepoPath()
     let path = system("git rev-parse --show-toplevel")
-    return path
+    return path[:-2]
 endfunction
 
 " Open ack and put the cursor in the right position
