@@ -31,8 +31,14 @@ cnoremap <C-v> <C-R>+
 "nnoremap y "+y
 "vnoremap y "+y
 
+function! GetRepoPath()
+    let path = system("git rev-parse --show-toplevel")
+    return path
+endfunction
+
 " Open ack and put the cursor in the right position
-map <leader>g :Ack  .<left><left>
+map <leader>g :Ack   <C-R>=GetRepoPath()<CR><C-A><right><right><right><right>
+
 " ack in the current file
 map <leader><space> :Ack   <C-R>%<C-A><right><right><right><right>
 
