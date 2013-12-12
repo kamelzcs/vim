@@ -54,6 +54,10 @@ set tags=./tags;/
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <Leader>vs :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
+
+"template setting
+let g:email = "kamel@luxeys.com"
+let g:username = "Shuai Zhao"
 au FocusLost * :wa
 autocmd filetype python nnoremap <F5> : <C-U>!python % <CR>
 autocmd filetype c nnoremap <F5> :<C-U>make %:r && ./%:r<CR>
