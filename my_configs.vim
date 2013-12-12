@@ -11,6 +11,8 @@ colorscheme solarized
 set nu
 set relativenumber
 set clipboard=unnamedplus
+set nowrap                      " Do not wrap long lines
+set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
 
 "tagbar appears on the left
 let g:tagbar_left=1
@@ -30,6 +32,8 @@ imap <C-v> <ESC>"+pa
 cnoremap <C-v> <C-R>+
 "nnoremap y "+y
 "vnoremap y "+y
+" Yank from the cursor to the end of the line, to be consistent with C and D.
+nnoremap Y y$
 
 function! GetRepoPath()
     let path = system("git rev-parse --show-toplevel")
@@ -63,8 +67,10 @@ autocmd filetype python nnoremap <F5> : <C-U>!python % <CR>
 autocmd filetype c nnoremap <F5> :<C-U>make %:r && ./%:r<CR>
 autocmd filetype cpp nnoremap <F5> :<C-U>make %:r && ./%:r<CR>
 "set listchars=tab:>-,trail:-
-set listchars=tab:>-,trail:-,extends:#,nbsp:.
+"set listchars=tab:>-,trail:-,extends:#,nbsp:.
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 set list
+set scrolloff=3                 " Minimum lines to keep above and below curso
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
 
