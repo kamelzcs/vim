@@ -10,6 +10,8 @@ Added the ,g ack search shotcut and changed the switchbuf to not include the new
 
 Exclude the tags from the ack serach
 
+Use `:so %` to source file. Use source as an ex-command will lead to some errors.
+
 # The Ultimate vimrc
 
 Over the last 8 years I have used and tweaked Vim. This is my Ultimate vimrc.
