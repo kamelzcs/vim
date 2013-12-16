@@ -12,6 +12,12 @@ Exclude the tags from the ack serach
 
 Use `:so %` to source file. Use source as an ex-command will lead to some errors.
 
+If user Kubuntu, install vim-gtk to unsure the system clipboard support.
+
+Install the latested vim, maybe https://launchpad.net/~nmi/+archive/vim-snapshots is good for YouCompleteMe.
+
+Reinstall the Vundle if failed.
+
 # The Ultimate vimrc
 
 Over the last 8 years I have used and tweaked Vim. This is my Ultimate vimrc.
