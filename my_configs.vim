@@ -13,6 +13,8 @@ set relativenumber
 set clipboard=unnamedplus
 set nowrap                      " Do not wrap long lines
 set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
+set mouse=a " Automatically enable mouse usage
+set mousehide " Hide the mouse cursor while typing
 
 "tagbar appears on the left
 let g:tagbar_left=1
