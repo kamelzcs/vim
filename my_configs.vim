@@ -52,9 +52,10 @@ nnoremap <F12> :TlistToggle<CR>
 "not auto folding
 let g:pymode_folding=0
 let g:NERDTreeWinPos = "right"
+"
 "not auto trail white spaces
-let g:pymode_utils_whitespaces=0
-
+"let g:pymode_utils_whitespaces=0
+let g:pymode_trim_whitespaces = 0
 set tags=./tags;/
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <Leader>vs :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
