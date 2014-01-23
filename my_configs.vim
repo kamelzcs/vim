@@ -29,6 +29,35 @@ imap jj <Esc>
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+let g:acp_enableAtStartup = 0
+ " enable completion from tags
+let g:ycm_collect_identifiers_from_tags_files = 1
+ " remap Ultisnips for compatibility for YCM
+let g:UltiSnipsExpandTrigger = '<C-j>'
+let g:UltiSnipsJumpForwardTrigger = '<C-j>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
+
+ " Enable omni completion.
+            autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+            autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+            autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+            autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+            autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+            autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+            autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+
+" For snippet_complete marker.
+if has('conceal')
+    set conceallevel=2 concealcursor=i
+endif
+
+" Disable the neosnippet preview candidate window
+" When enabled, there can be too much visual noise
+" especially when splits are used.
+set completeopt-=preview
+
+
 "command line paste
 cnoremap <C-v> <C-R>+
 "nnoremap y "+y
@@ -62,8 +91,8 @@ map <Leader>vs :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 
 "template setting
-let g:email = "kamel@luxeys.com"
-let g:username = "Shuai Zhao"
+let g:email = "info@luxeys.com"
+let g:username = "luxeys"
 au FocusLost * :wa
 autocmd filetype python nnoremap <F5> : <C-U>!python % <CR>
 autocmd filetype c nnoremap <F5> :<C-U>make %:r && ./%:r<CR>
