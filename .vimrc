@@ -5,10 +5,6 @@ source ~/vimConf/vimrcs/filetypes.vim
 source ~/vimConf/vimrcs/plugins_config.vim
 source ~/vimConf/vimrcs/extended.vim
 
-try
-source ~/vimConf/my_configs.vim
-catch
-endtry
 
 
 
@@ -124,3 +120,7 @@ filetype plugin indent on     " required!
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle commands are not allowed.
 
+try
+source ~/vimConf/my_configs.vim
+catch
+endtry
