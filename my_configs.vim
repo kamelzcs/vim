@@ -14,6 +14,7 @@ set clipboard=unnamedplus
 set nowrap                      " Do not wrap long lines
 set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
 
+let g:pymode_lint_ignore = "E111,E121,E501"
 
 "tagbar appears on the left
 let g:tagbar_left=1
@@ -29,7 +30,6 @@ imap jj <Esc>
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 
-nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 let g:acp_enableAtStartup = 0
  " enable completion from tags
 let g:ycm_collect_identifiers_from_tags_files = 1
