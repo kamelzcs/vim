@@ -104,6 +104,7 @@ set list
 set scrolloff=3                 " Minimum lines to keep above and below curso
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
+nnoremap <Leader>u :UndotreeToggle<CR>
 
 map <Leader>yr :YRShow<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
