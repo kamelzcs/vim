@@ -108,6 +108,12 @@ Bundle 'Valloric/YouCompleteMe'
 
 Bundle 'airblade/vim-gitgutter'
 
+Bundle 'mbbill/undotree'
+
+Bundle 'Lokaltog/vim-powerline'
+
+Bundle 'Lokaltog/powerline'
+
 filetype plugin indent on     " required!
 
 "

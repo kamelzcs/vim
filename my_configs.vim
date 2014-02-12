@@ -33,6 +33,7 @@ imap <C-v> <ESC>"+pa
 let g:acp_enableAtStartup = 0
  " enable completion from tags
 let g:ycm_collect_identifiers_from_tags_files = 1
+nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
  " remap Ultisnips for compatibility for YCM
 let g:UltiSnipsExpandTrigger = '<C-j>'
 let g:UltiSnipsJumpForwardTrigger = '<C-j>'
@@ -69,6 +70,9 @@ function! GetRepoPath()
     let path = system("git rev-parse --show-toplevel")
     return path[:-2]
 endfunction
+"
+"change to root the of the repo
+map <leader>h :cd <c-r>=GetRepoPath()<cr>/
 
 " Open ack and put the cursor in the right position
 map <leader>g :Ack   <C-R>=GetRepoPath()<CR><C-A><right><right><right><right>
@@ -79,7 +83,7 @@ map <leader><space> :Ack   <C-R>%<C-A><right><right><right><right>
 
 nnoremap <F12> :TlistToggle<CR>
 "not auto folding
-let g:pymode_folding=0
+"let g:pymode_folding=0
 let g:NERDTreeWinPos = "right"
 "
 "not auto trail white spaces
@@ -105,6 +109,10 @@ set scrolloff=3                 " Minimum lines to keep above and below curso
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
 nnoremap <Leader>u :UndotreeToggle<CR>
+let g:Powerline_symbols = 'fancy'
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+set guifont=Liberation\ Mono\ for\ Powerline\ 10 
+let g:Powerline_colorscheme='solarized256'
 
 map <Leader>yr :YRShow<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
