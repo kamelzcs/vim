@@ -15,6 +15,7 @@ set nowrap                      " Do not wrap long lines
 set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
 
 let g:pymode_lint_ignore = "E111,E121,E501"
+let g:pymode_lint_checker = "pyflakes"
 
 "tagbar appears on the left
 let g:tagbar_left=1
@@ -30,14 +31,46 @@ imap jj <Esc>
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 
-let g:acp_enableAtStartup = 0
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
+
+" If you prefer the Omni-Completion tip window to close when a selection is
+" made, these lines close it on movement in insert mode or when leaving
+" insert mode
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+let g:acp_enableAtStartup = 1
  " enable completion from tags
-let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_collect_identifiers_from_tags_files = 0
 nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
- " remap Ultisnips for compatibility for YCM
-let g:UltiSnipsExpandTrigger = '<C-j>'
-let g:UltiSnipsJumpForwardTrigger = '<C-j>'
-let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
+
+function! g:UltiSnips_Complete()
+    call UltiSnips_ExpandSnippet()
+    if g:ulti_expand_res == 0
+        if pumvisible()
+            return "\<C-n>"
+        else
+            call UltiSnips_JumpForwards()
+            if g:ulti_jump_forwards_res == 0
+               return "\<TAB>"
+            endif
+        endif
+    endif
+    return ""
+endfunction
+
+au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+
+" 从第一个键入字符就开始罗列匹配项  
+let g:ycm_min_num_of_chars_for_completion=1  
+" 禁止缓存匹配项，每次都重新生成匹配项  
+let g:ycm_cache_omnifunc=0  
+" 语法关键字补全              
+let g:ycm_seed_identifiers_with_syntax=1 
+
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsListSnippets="<c-e>"
 
  " Enable omni completion.
             autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -48,10 +81,11 @@ let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
             autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
             autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
+
 " For snippet_complete marker.
-if has('conceal')
-    set conceallevel=2 concealcursor=i
-endif
+"if has('conceal')
+    "set conceallevel=2 concealcursor=i
+"endif
 
 " Disable the neosnippet preview candidate window
 " When enabled, there can be too much visual noise
@@ -72,7 +106,7 @@ function! GetRepoPath()
 endfunction
 "
 "change to root the of the repo
-map <leader>h :cd <c-r>=GetRepoPath()<cr>/
+map <leader>h :cd <c-r>=GetRepoPath()<cr><cr>
 
 " Open ack and put the cursor in the right position
 map <leader>g :Ack   <C-R>=GetRepoPath()<CR><C-A><right><right><right><right>

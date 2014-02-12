@@ -114,6 +114,10 @@ Bundle 'Lokaltog/vim-powerline'
 
 Bundle 'Lokaltog/powerline'
 
+Bundle "godlygeek/tabular"
+
+Bundle "SirVer/ultisnips"
+
 filetype plugin indent on     " required!
 
 "
