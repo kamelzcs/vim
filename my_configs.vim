@@ -40,9 +40,9 @@ let g:syntastic_enable_signs=1
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
-let g:acp_enableAtStartup = 1
+let g:acp_enableAtStartup = 0
  " enable completion from tags
-let g:ycm_collect_identifiers_from_tags_files = 0
+let g:ycm_collect_identifiers_from_tags_files = 1
 nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 function! g:UltiSnips_Complete()
@@ -65,7 +65,7 @@ au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:U
 " 从第一个键入字符就开始罗列匹配项  
 let g:ycm_min_num_of_chars_for_completion=1  
 " 禁止缓存匹配项，每次都重新生成匹配项  
-let g:ycm_cache_omnifunc=0  
+let g:ycm_cache_omnifunc=1  
 " 语法关键字补全              
 let g:ycm_seed_identifiers_with_syntax=1 
 
