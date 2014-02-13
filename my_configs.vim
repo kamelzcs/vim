@@ -16,7 +16,8 @@ set nojoinspaces                " Prevents inserting two spaces after punctuatio
 
 let g:pymode_lint_ignore = "E111,E121,E501"
 let g:pymode_rope_complete_on_dot = 0
-"let g:pymode_lint_checker = "pyflakes"
+let g:pymode_lint_on_write = 1
+"let g:pymode_lint_on_fly = 1
 
 "tagbar appears on the left
 let g:tagbar_left=1
