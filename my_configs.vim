@@ -135,6 +135,7 @@ let g:email = "info@luxeys.com"
 let g:username = "luxeys"
 au FocusLost * :wa
 autocmd filetype python nnoremap <F5> : <C-U>!python % <CR>
+autocmd filetype r nnoremap <F5> :<C-U>!Rscript % <CR>
 autocmd filetype c nnoremap <F5> :<C-U>make %:r && ./%:r<CR>
 autocmd filetype cpp nnoremap <F5> :<C-U>make %:r && ./%:r<CR>
 "set listchars=tab:>-,trail:-

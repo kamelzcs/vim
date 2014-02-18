@@ -6,6 +6,8 @@ au FileType python syn keyword pythonDecorator True None False self
 
 au BufNewFile,BufRead *.jinja set syntax=htmljinja
 au BufNewFile,BufRead *.mako set ft=mako
+au BufNewFile,BufRead *.r set ft=r
+au BufNewFile,BufRead *.R set ft=r
 
 au FileType python map <buffer> F :set foldmethod=indent<cr>
 
