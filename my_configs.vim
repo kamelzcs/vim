@@ -15,7 +15,7 @@ set nowrap                      " Do not wrap long lines
 set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
 
 let g:pymode_lint_ignore = "E111,E121,E501"
-let g:pymode_rope_complete_on_dot = 0
+let g:pymode_rope_completion = 0
 let g:pymode_lint_on_write = 1
 "let g:pymode_lint_on_fly = 1
 
