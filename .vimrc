@@ -118,6 +118,13 @@ Bundle 'godlygeek/tabular'
 
 Bundle 'SirVer/ultisnips'
 
+Bundle 'vim-scripts/mru.vim'
+
+Bundle 'plasticboy/vim-markdown'
+
+Bundle 'kien/ctrlp.vim'
+
+
 filetype plugin indent on     " required!
 
 "
