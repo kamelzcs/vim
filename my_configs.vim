@@ -41,7 +41,7 @@ let g:syntastic_enable_signs=1
 " insert mode
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-
+let g:ack_wildignore = 0
 let g:acp_enableAtStartup = 0
  " enable completion from tags
 let g:ycm_collect_identifiers_from_tags_files = 1
