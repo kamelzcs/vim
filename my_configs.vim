@@ -17,6 +17,7 @@ set nojoinspaces                " Prevents inserting two spaces after punctuatio
 let g:pymode_lint_ignore = "E111,E121,E501"
 let g:pymode_rope_completion = 0
 let g:pymode_lint_on_write = 1
+let g:pymode_trim_whitespaces = 0
 "let g:pymode_lint_on_fly = 1
 
 "tagbar appears on the left
@@ -124,7 +125,6 @@ let g:NERDTreeWinPos = "right"
 "
 "not auto trail white spaces
 "let g:pymode_utils_whitespaces=0
-let g:pymode_trim_whitespaces = 0
 set tags=./tags;/
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <Leader>vs :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
