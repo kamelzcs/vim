@@ -30,7 +30,7 @@ let g:tagbar_left=1
 imap jj <Esc>
 
 "copy current file path to clipboard
-:nmap cp :let @" = expand("%")
+:nmap cp :let @+ = expand("%")
 
 "vmap <C-c> "+y
 "vmap <C-x> "+c
