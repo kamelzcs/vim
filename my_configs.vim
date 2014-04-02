@@ -29,6 +29,9 @@ let g:tagbar_left=1
 "for esc
 imap jj <Esc>
 
+"copy current file path to clipboard
+:nmap cp :let @" = expand("%")
+
 "vmap <C-c> "+y
 "vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
