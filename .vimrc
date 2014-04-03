@@ -108,8 +108,6 @@ Bundle 'Valloric/YouCompleteMe'
 
 Bundle 'airblade/vim-gitgutter'
 
-Bundle 'mbbill/undotree'
-
 Bundle 'Lokaltog/vim-powerline'
 
 Bundle 'Lokaltog/powerline'
@@ -123,6 +121,10 @@ Bundle 'vim-scripts/mru.vim'
 Bundle 'plasticboy/vim-markdown'
 
 Bundle 'kien/ctrlp.vim'
+
+Bundle 'jcfaria/Vim-R-plugin'
+
+Bundle 'sjl/gundo.vim'
 
 
 filetype plugin indent on     " required!
