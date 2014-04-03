@@ -116,6 +116,8 @@ Bundle 'godlygeek/tabular'
 
 Bundle 'SirVer/ultisnips'
 
+Bundle 'honza/vim-snippets'
+
 Bundle 'vim-scripts/mru.vim'
 
 Bundle 'plasticboy/vim-markdown'
