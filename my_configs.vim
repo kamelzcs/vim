@@ -112,7 +112,19 @@ function! GetRepoPath()
     let path = system("git rev-parse --show-toplevel")
     return path[:-2]
 endfunction
-"
+
+function! GetPcOrSmartFile()
+    let nowPath = expand("%:p")
+    if nowPath =~ "pc"
+        let newPath = substitute(nowPath, "pc", "smart", "")
+    else
+        let newPath = substitute(nowPath, "smart", "pc", "")
+    endif
+    return newPath
+endfunction
+
+map <leader>jp :tabedit <c-r>=GetPcOrSmartFile()<cr><cr>
+
 "change to root the of the repo
 map <leader>h :cd <c-r>=GetRepoPath()<cr><cr>
 
