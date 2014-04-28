@@ -73,6 +73,8 @@ Plugin 'sjl/gundo.vim'
 
 Plugin 'flazz/vim-colorschemes'
 
+Plugin 'bufexplorer.zip'
+
 call vundle#end()
 filetype plugin indent on     " required!
 " To ignore plugin indent changes, instead use:
