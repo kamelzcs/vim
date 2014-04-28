@@ -85,6 +85,18 @@ Plugin 'edsono/vim-matchit'
 
 Plugin 'elzr/vim-json'
 
+Plugin 'kshenoy/vim-signature'
+
+Plugin 'evanmiller/nginx-vim-syntax'
+
+Plugin 'pangloss/vim-javascript'
+
+Plugin 'kien/rainbow_parentheses.vim'
+
+Plugin 'tpope/vim-repeat'
+
+Plugin 'terryma/vim-expand-region'
+
 call vundle#end()
 filetype plugin indent on     " required!
 " To ignore plugin indent changes, instead use:
