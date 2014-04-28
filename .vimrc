@@ -81,6 +81,10 @@ Plugin 'taglist.vim'
 
 Plugin 'terryma/vim-multiple-cursors'
 
+Plugin 'edsono/vim-matchit'
+
+Plugin 'elzr/vim-json'
+
 call vundle#end()
 filetype plugin indent on     " required!
 " To ignore plugin indent changes, instead use:
