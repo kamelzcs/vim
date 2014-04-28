@@ -1,18 +1,10 @@
-syntax on
-set t_Co=16
-set background=dark
-let g:solarized_termcolors=16
-"let g:solarized_termtrans = 1
-"let g:solarized_contrast="high"
-"let g:solarized_visibility="high"
-"set term=xterm-256color
-colorscheme solarized
-
 set nu
 set relativenumber
 set clipboard=unnamedplus
 set nowrap                      " Do not wrap long lines
 set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
+
+let g:airline#extensions#tabline#enabled = 1
 
 let g:pymode_lint_ignore = "E111,E121,E501"
 let g:pymode_rope_completion = 0
@@ -53,22 +45,6 @@ nnoremap <leader>j :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-"function! g:UltiSnips_Complete()
-    "call UltiSnips#ExpandSnippet()
-    "if g:ulti_expand_res == 0
-        "if pumvisible()
-            "return "\<C-n>"
-        "else
-            "call UltiSnips#JumpForwards()
-            "if g:ulti_jump_forwards_res == 0
-               "return "\<TAB>"
-            "endif
-        "endif
-    "endif
-    "return ""
-"endfunction
-
-"au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
 
 " 从第一个键入字符就开始罗列匹配项  
 let g:ycm_min_num_of_chars_for_completion=1  

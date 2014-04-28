@@ -1,147 +1,100 @@
-set runtimepath+=~/vimConf
-
-source ~/vimConf/vimrcs/basic.vim
-source ~/vimConf/vimrcs/filetypes.vim
-source ~/vimConf/vimrcs/plugins_config.vim
-source ~/vimConf/vimrcs/extended.vim
-
-
-
-
-" Disable NeoComplCache for certain filetypes
-"if has('autocmd')
-  "autocmd FileType python,c,cpp,pandoc,markdown nested NeoComplCacheLock
- "endif
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
-
-"" Plugin key-mappings.
-"imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-"smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-"xmap <C-k>     <Plug>(neosnippet_expand_target)
-"
-"" SuperTab like snippets behavior.
-"imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-"\ "\<Plug>(neosnippet_expand_or_jump)"
-"\: pumvisible() ? "\<C-n>" : "\<TAB>"
-"smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-"\ "\<Plug>(neosnippet_expand_or_jump)"
-"\: "\<TAB>"
-"
-"" For snippet_complete marker.
-"if has('conceal')
-"  set conceallevel=2 concealcursor=i
-"endif
-
-
 set nocompatible              " be iMproved
 filetype off                  " required!
-"
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " My bundles here:
 "
 " original repos on GitHub
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'tpope/vim-rails.git'
 " vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
 " non-GitHub repos
-Bundle 'git://git.wincent.com/command-t.git'
-" Git repos on your local machine (i.e. when working on your own plugin)
-Bundle 'file:///Users/gmarik/path/to/plugin'
-" ...
-"Bundle 'Shougo/neocomplete'
+Plugin 'git://git.wincent.com/command-t.git'
 
-"Bundle 'Shougo/neosnippet'
+Plugin 'scrooloose/nerdcommenter'
 
-"Bundle 'Shougo/neosnippet-snippets'
+Plugin 'scrooloose/syntastic'
 
-"Bundle 'Shougo/neocomplcache'
+Plugin 'majutsushi/tagbar'
 
-Bundle 'tpope/vim-fugitive'
+"Plugin 'altercation/vim-colors-solarized'
 
-Bundle 'scrooloose/nerdcommenter'
+Plugin 'Raimondi/delimitMate'
 
-Bundle 'scrooloose/syntastic'
+Plugin 'sigurdga/gnome-terminal-colors-solarized'
 
-Bundle 'majutsushi/tagbar'
+Plugin 'klen/python-mode'
 
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'YankRing.vim'
 
-"Bundle 'altercation/solarized'
+Plugin 'mileszs/ack.vim'
 
-"Bundle 'kevinw/pyflakes-vim'
+Plugin 'tpope/vim-surround'
 
-Bundle 'Raimondi/delimitMate'
+Plugin 'aperezdc/vim-template'
 
-Bundle 'sigurdga/gnome-terminal-colors-solarized'
+Plugin 'Glench/Vim-Jinja2-Syntax'
 
-Bundle 'Lokaltog/vim-easymotion'
+Plugin 'Lokaltog/powerline-fonts'
 
-Bundle 'klen/python-mode'
+Plugin 'mattn/emmet-vim'
 
-Bundle 'vim-scripts/YankRing.vim'
+Plugin 'Valloric/YouCompleteMe'
 
-Bundle 'mileszs/ack.vim'
+Plugin 'airblade/vim-gitgutter'
 
-Bundle 'tpope/vim-surround'
+Plugin 'bling/vim-airline'
 
-Bundle 'rstacruz/sparkup'
+Plugin 'godlygeek/tabular'
 
-Bundle 'aperezdc/vim-template'
+Plugin 'SirVer/ultisnips'
 
-Bundle 'Glench/Vim-Jinja2-Syntax'
+Plugin 'honza/vim-snippets'
 
-Bundle 'Lokaltog/powerline-fonts'
+Plugin 'mru.vim'
 
-Bundle 'mattn/emmet-vim'
+Plugin 'plasticboy/vim-markdown'
 
-Bundle 'Valloric/YouCompleteMe'
+Plugin 'kien/ctrlp.vim'
 
-Bundle 'airblade/vim-gitgutter'
+Plugin 'jcfaria/Vim-R-plugin'
 
-Bundle 'Lokaltog/vim-powerline'
+Plugin 'sjl/gundo.vim'
 
-Bundle 'Lokaltog/powerline'
+Plugin 'flazz/vim-colorschemes'
 
-Bundle 'godlygeek/tabular'
-
-Bundle 'SirVer/ultisnips'
-
-Bundle 'honza/vim-snippets'
-
-Bundle 'vim-scripts/mru.vim'
-
-Bundle 'plasticboy/vim-markdown'
-
-Bundle 'kien/ctrlp.vim'
-
-Bundle 'jcfaria/Vim-R-plugin'
-
-Bundle 'sjl/gundo.vim'
-
-
+call vundle#end()
 filetype plugin indent on     " required!
-
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
 "
 " Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install (update) bundles
-" :BundleSearch(!) foo - search (or refresh cache first) for foo
-" :BundleClean(!)      - confirm (or auto-approve) removal of unused bundles
+" :PluginList          - list configured plugins
+" :PluginInstall(!)    - install (update) plugins
+" :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
 "
 " see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle commands are not allowed.
-
-try
+" Put your non-Plugin stuff after this line
+set runtimepath+=~/vimConf
+source ~/vimConf/vimrcs/basic.vim
+source ~/vimConf/vimrcs/filetypes.vim
+source ~/vimConf/vimrcs/plugins_config.vim
+source ~/vimConf/vimrcs/extended.vim
 source ~/vimConf/my_configs.vim
-catch
-endtry
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+syntax enable
+set t_Co=16
+set background=dark
+let g:solarized_termcolors=16
+colorscheme solarized
