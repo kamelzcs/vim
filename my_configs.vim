@@ -4,6 +4,7 @@ set clipboard=unnamedplus
 set nowrap                      " Do not wrap long lines
 set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
 
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
 let g:pymode_lint_ignore = "E111,E121,E501"
