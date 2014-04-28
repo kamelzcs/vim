@@ -104,4 +104,5 @@ syntax enable
 set t_Co=16
 set background=dark
 let g:solarized_termcolors=16
+let g:solarized_contrast="hight"
 colorscheme solarized
