@@ -79,6 +79,8 @@ Plugin 'bufexplorer.zip'
 
 Plugin 'taglist.vim'
 
+Plugin 'terryma/vim-multiple-cursors'
+
 call vundle#end()
 filetype plugin indent on     " required!
 " To ignore plugin indent changes, instead use:
@@ -92,7 +94,6 @@ filetype plugin indent on     " required!
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-"set runtimepath+=~/vimConf
 source ~/vimConf/vimrcs/basic.vim
 source ~/vimConf/vimrcs/filetypes.vim
 source ~/vimConf/vimrcs/plugins_config.vim
