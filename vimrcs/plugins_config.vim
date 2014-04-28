@@ -8,9 +8,9 @@
 """"""""""""""""""""""""""""""
 " => Load pathogen paths
 """"""""""""""""""""""""""""""
-call pathogen#infect('~/vimConf/sources_forked')
-call pathogen#infect('~/vimConf/sources_non_forked')
-call pathogen#helptags()
+"call pathogen#infect('~/vimConf/sources_forked')
+"call pathogen#infect('~/vimConf/sources_non_forked')
+"call pathogen#helptags()
 
 """"""""""""""""""""""""""""""
 " => bufExplorer plugin
