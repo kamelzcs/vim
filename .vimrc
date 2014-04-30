@@ -91,11 +91,13 @@ Plugin 'evanmiller/nginx-vim-syntax'
 
 Plugin 'pangloss/vim-javascript'
 
-Plugin 'oblitum/rainbow'
-
 Plugin 'tpope/vim-repeat'
 
 Plugin 'terryma/vim-expand-region'
+
+Plugin 'tpope/vim-unimpaired'
+
+Plugin 'gregsexton/gitv'
 
 call vundle#end()
 filetype plugin indent on     " required!
