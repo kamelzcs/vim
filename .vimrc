@@ -91,7 +91,7 @@ Plugin 'evanmiller/nginx-vim-syntax'
 
 Plugin 'pangloss/vim-javascript'
 
-Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'oblitum/rainbow'
 
 Plugin 'tpope/vim-repeat'
 

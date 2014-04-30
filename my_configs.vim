@@ -33,6 +33,8 @@ let g:pymode_trim_whitespaces = 0
 "tagbar appears on the left
 let g:tagbar_left=1
 
+let g:rainbow_active = 1
+
 "changed the ~/.vim/bundle/python-mode/after/indent/python.vim: indentkeys No :,shiftwidth=2
 "basic.vim cancled trailing space in python/coffe  deletion
 
