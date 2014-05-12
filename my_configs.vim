@@ -154,6 +154,7 @@ autocmd filetype cpp nnoremap <F5> :<C-U>make %:r && ./%:r<CR>
 "set listchars=tab:>-,trail:-
 "set listchars=tab:>-,trail:-,extends:#,nbsp:.
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
+autocmd VimEnter * IndentGuidesToggle
 set list
 set scrolloff=3                 " Minimum lines to keep above and below curso
 "This unsets the "last search pattern" register by hitting return

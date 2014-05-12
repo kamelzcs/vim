@@ -99,6 +99,8 @@ Plugin 'tpope/vim-unimpaired'
 
 Plugin 'gregsexton/gitv'
 
+Plugin 'nathanaelkane/vim-indent-guides'
+
 call vundle#end()
 filetype plugin indent on     " required!
 " To ignore plugin indent changes, instead use:
