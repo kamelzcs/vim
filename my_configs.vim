@@ -28,7 +28,6 @@ let g:pymode_lint_ignore = "E111,E121,E501"
 let g:pymode_rope_completion = 0
 let g:pymode_lint_on_write = 1
 let g:pymode_trim_whitespaces = 0
-"let g:pymode_lint_on_fly = 1
 
 "tagbar appears on the left
 let g:tagbar_left=1
@@ -84,12 +83,6 @@ let g:UltiSnipsListSnippets="<c-e>"
             autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
             autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
             autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-
-
-" For snippet_complete marker.
-"if has('conceal')
-    "set conceallevel=2 concealcursor=i
-"endif
 
 " Disable the neosnippet preview candidate window
 " When enabled, there can be too much visual noise
@@ -151,10 +144,8 @@ autocmd filetype python nnoremap <F5> : <C-U>!python % <CR>
 autocmd filetype r nnoremap <F5> :<C-U>!Rscript % <CR>
 autocmd filetype c nnoremap <F5> :<C-U>make %:r && ./%:r<CR>
 autocmd filetype cpp nnoremap <F5> :<C-U>make %:r && ./%:r<CR>
-"set listchars=tab:>-,trail:-
-"set listchars=tab:>-,trail:-,extends:#,nbsp:.
-set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 autocmd VimEnter * IndentGuidesToggle
+set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 set list
 set scrolloff=3                 " Minimum lines to keep above and below curso
 "This unsets the "last search pattern" register by hitting return
