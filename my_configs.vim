@@ -145,6 +145,9 @@ autocmd filetype r nnoremap <F5> :<C-U>!Rscript % <CR>
 autocmd filetype c nnoremap <F5> :<C-U>make %:r && ./%:r<CR>
 autocmd filetype cpp nnoremap <F5> :<C-U>make %:r && ./%:r<CR>
 let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey
 set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 set list
 set scrolloff=3                 " Minimum lines to keep above and below curso
