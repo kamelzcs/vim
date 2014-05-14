@@ -6,15 +6,6 @@ set nojoinspaces                " Prevents inserting two spaces after punctuatio
 """""""""""""""""
 "Rainbow
 "“”“”“”“”“”“”“”“
-"let g:rbpt_colorpairs = [
-        "\ ['9', 'darkred'],
-        "\ ['13', 'darkmagenta'],
-        "\ ['2', 'green'],
-        "\ ['6', 'cyan'],
-        "\ ['3', 'yellow'],
-        "\ ['5', 'magenta'],
-        "\ ['4', 'blue'],
-        "\ ]
 let g:rbpt_colorpairs = [
   \ [ '1',  '#dc322f'],
   \ [ '9',  '#cb4b16'],
