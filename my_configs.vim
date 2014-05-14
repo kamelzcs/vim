@@ -45,7 +45,6 @@ let g:airline_readonly_symbol   = '⭤'
 let g:airline_linecolumn_prefix = '⭡'
 
 let g:airline_powerline_fonts = 1
-set guifont=Liberation\ Mono\ for\ Powerline\ 10
 let g:airline#extensions#tabline#enabled = 1
 
 let g:pymode_lint_ignore = "E111,E121,E501"
@@ -180,7 +179,6 @@ nnoremap <CR> :noh<CR><CR>
 nnoremap <Leader>u :GundoToggle<CR>
 let g:Powerline_symbols = 'fancy'
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
-set guifont=Liberation\ Mono\ for\ Powerline\ 10 
 let g:Powerline_colorscheme='solarized256'
 
 map <Leader>yr :YRShow<CR>
