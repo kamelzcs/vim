@@ -12,11 +12,11 @@
 if has("mac") || has("macunix")
     set gfn=Source\ Code\ Pro:h15,Menlo:h15
 elseif has("win16") || has("win32")
-    set gfn=Source\ Code\ Pro:h12
+    set gfn=Source\ Code\ Pro:h11
 elseif has("linux")
-    set gfn=Source\ Code\ Pro:h12
+    set gfn=Source\ Code\ Pro:h11
 elseif has("unix")
-    set gfn=Source\ Code\ Pro:h12
+    set gfn=Source\ Code\ Pro:h11
     "set gfn=Monospace\ 11
 endif
 
