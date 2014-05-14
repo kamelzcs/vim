@@ -6,38 +6,25 @@ set nojoinspaces                " Prevents inserting two spaces after punctuatio
 """""""""""""""""
 "Rainbow
 "“”“”“”“”“”“”“”“
-" Rainbow Parens
-" Modified colors so they look nice with solarized.
-" Parens nest as orange -> red -> green and then repeat
-" The pairs go from bottom to top for depth, with the displayed color
-" being the left column.
 "let g:rbpt_colorpairs = [
-    "\ ['red', 'RoyalBlue3'],
-    "\ ['darkgreen', 'SeaGreen3'],
-    "\ ['darkred', 'DarkOrchid3'],
-    "\ ['red', 'firebrick3'],
-    "\ ['darkgreen', 'RoyalBlue3'],
-    "\ ['darkred', 'SeaGreen3'],
-    "\ ['red', 'DarkOrchid3'],
-    "\ ['darkgreen', 'firebrick3'],
-    "\ ['darkred', 'RoyalBlue3'],
-    "\ ['red', 'SeaGreen3'],
-    "\ ['darkgreen', 'DarkOrchid3'],
-    "\ ['darkred', 'firebrick3'],
-    "\ ['red', 'RoyalBlue3'],
-    "\ ['darkgreen', 'SeaGreen3'],
-    "\ ['darkred', 'DarkOrchid3'],
-    "\ ['red', 'firebrick3'],
-    "\ ]
+        "\ ['9', 'darkred'],
+        "\ ['13', 'darkmagenta'],
+        "\ ['2', 'green'],
+        "\ ['6', 'cyan'],
+        "\ ['3', 'yellow'],
+        "\ ['5', 'magenta'],
+        "\ ['4', 'blue'],
+        "\ ]
 let g:rbpt_colorpairs = [
-        \ ['9', 'darkred'],
-        \ ['13', 'darkmagenta'],
-        \ ['2', 'green'],
-        \ ['6', 'cyan'],
-        \ ['3', 'yellow'],
-        \ ['5', 'magenta'],
-        \ ['4', 'blue'],
-        \ ]
+  \ [ '1',  '#dc322f'],
+  \ [ '9',  '#cb4b16'],
+  \ [ '13', '#6c71c4'],
+  \ [ '2',  '#859900'],
+  \ [ '6',  '#2aa198'],
+  \ [ '3',  '#b58900'],
+  \ [ '5',  '#d33682'],
+  \ [ '4',  '#268bd2'],
+  \ ]
 " Nesting level to stop coloring at.
 " This does shift what colors the upper nests will be if changed.
 let g:rbpt_max = 16
