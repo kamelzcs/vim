@@ -8,17 +8,16 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => GUI related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"set background=dark
-""
-"colorscheme peaksea
-
 " Set font according to system
 if has("mac") || has("macunix")
-    set gfn=Menlo:h15
+    set gfn=Source\ Code\ Pro:h15,Menlo:h15
 elseif has("win16") || has("win32")
-    set gfn=Bitstream\ Vera\ Sans\ Mono:h11
+    set gfn=Source\ Code\ Pro:h12
 elseif has("linux")
-    set gfn=Monospace\ 11
+    set gfn=Source\ Code\ Pro:h12
+elseif has("unix")
+    set gfn=Source\ Code\ Pro:h12
+    "set gfn=Monospace\ 11
 endif
 
 " Open MacVim in fullscreen mode
