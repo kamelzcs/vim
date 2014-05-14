@@ -101,6 +101,8 @@ Plugin 'gregsexton/gitv'
 
 Plugin 'nathanaelkane/vim-indent-guides'
 
+Plugin 'kien/rainbow_parentheses.vim'
+
 call vundle#end()
 filetype plugin indent on     " required!
 " To ignore plugin indent changes, instead use:
@@ -124,5 +126,5 @@ syntax enable
 set t_Co=16
 set background=dark
 let g:solarized_termcolors=16
-let g:solarized_contrast="hight"
+let g:solarized_contrast="high"
 colorscheme solarized

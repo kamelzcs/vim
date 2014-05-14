@@ -3,6 +3,52 @@ set relativenumber
 set clipboard=unnamedplus
 set nowrap                      " Do not wrap long lines
 set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
+"""""""""""""""""
+"Rainbow
+"“”“”“”“”“”“”“”“
+" Rainbow Parens
+" Modified colors so they look nice with solarized.
+" Parens nest as orange -> red -> green and then repeat
+" The pairs go from bottom to top for depth, with the displayed color
+" being the left column.
+"let g:rbpt_colorpairs = [
+    "\ ['red', 'RoyalBlue3'],
+    "\ ['darkgreen', 'SeaGreen3'],
+    "\ ['darkred', 'DarkOrchid3'],
+    "\ ['red', 'firebrick3'],
+    "\ ['darkgreen', 'RoyalBlue3'],
+    "\ ['darkred', 'SeaGreen3'],
+    "\ ['red', 'DarkOrchid3'],
+    "\ ['darkgreen', 'firebrick3'],
+    "\ ['darkred', 'RoyalBlue3'],
+    "\ ['red', 'SeaGreen3'],
+    "\ ['darkgreen', 'DarkOrchid3'],
+    "\ ['darkred', 'firebrick3'],
+    "\ ['red', 'RoyalBlue3'],
+    "\ ['darkgreen', 'SeaGreen3'],
+    "\ ['darkred', 'DarkOrchid3'],
+    "\ ['red', 'firebrick3'],
+    "\ ]
+let g:rbpt_colorpairs = [
+        \ ['9', 'darkred'],
+        \ ['13', 'darkmagenta'],
+        \ ['2', 'green'],
+        \ ['6', 'cyan'],
+        \ ['3', 'yellow'],
+        \ ['5', 'magenta'],
+        \ ['4', 'blue'],
+        \ ]
+" Nesting level to stop coloring at.
+" This does shift what colors the upper nests will be if changed.
+let g:rbpt_max = 16
+" Enable rainbow parentheses for all buffers
+augroup rainbow_parentheses
+  au!
+  au VimEnter * RainbowParenthesesActivate
+  au BufEnter * RainbowParenthesesLoadRound
+  au BufEnter * RainbowParenthesesLoadSquare
+  au BufEnter * RainbowParenthesesLoadBraces
+augroup END
 
 """"""""""""""""""""""""""""""
 " airline
