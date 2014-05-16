@@ -91,6 +91,8 @@ Plugin 'evanmiller/nginx-vim-syntax'
 
 Plugin 'pangloss/vim-javascript'
 
+Plugin 'jelera/vim-javascript-syntax'
+
 Plugin 'tpope/vim-repeat'
 
 Plugin 'terryma/vim-expand-region'
