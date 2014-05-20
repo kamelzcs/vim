@@ -105,6 +105,10 @@ Plugin 'nathanaelkane/vim-indent-guides'
 
 Plugin 'kien/rainbow_parentheses.vim'
 
+Plugin 'mhinz/vim-signify'
+
+Plugin 'Shougo/unite.vim'
+
 call vundle#end()
 filetype plugin indent on     " required!
 " To ignore plugin indent changes, instead use:
