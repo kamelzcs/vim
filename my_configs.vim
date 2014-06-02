@@ -88,8 +88,6 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
-" 禁止缓存匹配项，每次都重新生成匹配项  
-let g:ycm_cache_omnifunc=1  
 " 语法关键字补全              
 let g:ycm_seed_identifiers_with_syntax=1 
 
