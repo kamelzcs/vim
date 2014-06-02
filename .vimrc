@@ -109,6 +109,8 @@ Plugin 'mhinz/vim-signify'
 
 Plugin 'Shougo/unite.vim'
 
+Plugin 'marijnh/tern_for_vim'
+
 call vundle#end()
 filetype plugin indent on     " required!
 " To ignore plugin indent changes, instead use:
