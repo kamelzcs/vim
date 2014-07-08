@@ -183,6 +183,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " TagBar {
         nnoremap <leader>tt :TagbarToggle<CR>
  " Fugitive {
+        nnoremap <silent> <leader>ga :Git add %:p<CR><CR>
         nnoremap <silent> <leader>gs :Gstatus<CR>
         nnoremap <silent> <leader>gd :Gdiff<CR>
         "nnoremap <silent> <leader>dfs ZZ:Gedit<CR> 
