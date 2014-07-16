@@ -109,7 +109,7 @@ Plugin 'mhinz/vim-signify'
 
 Plugin 'Shougo/unite.vim'
 
-Plugin 'marijnh/tern_for_vim'
+"Plugin 'marijnh/tern_for_vim'
 
 call vundle#end()
 filetype plugin indent on     " required!
@@ -129,7 +129,7 @@ source ~/vimConf/vimrcs/filetypes.vim
 source ~/vimConf/vimrcs/plugins_config.vim
 source ~/vimConf/vimrcs/extended.vim
 source ~/vimConf/my_configs.vim
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 syntax enable
 set t_Co=16
 set background=dark
