@@ -88,8 +88,8 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
-" 语法关键字补全              
-let g:ycm_seed_identifiers_with_syntax=1 
+" 语法关键字补全
+let g:ycm_seed_identifiers_with_syntax=1
 
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsListSnippets="<c-e>"
@@ -162,7 +162,7 @@ au FocusLost * :wa
 autocmd filetype python nnoremap <F5> : <C-U>!python % <CR>
 autocmd filetype r nnoremap <F5> :<C-U>!Rscript % <CR>
 autocmd filetype c nnoremap <F5> :<C-U>make %:r && ./%:r<CR>
-autocmd filetype cpp nnoremap <F5> :<C-U>make %:r && ./%:r<CR>
+autocmd filetype cpp nnoremap <F5> :<C-U>!g++ -Wall -g -std=c++0x % -o %:r && ./%:r<CR>
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
