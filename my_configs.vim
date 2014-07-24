@@ -47,7 +47,10 @@ let g:airline_linecolumn_prefix = '⭡'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
-let g:pymode_lint_ignore = "E111,E121,E501"
+let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_flake8_args='--ignore=E111,E114,E121,E501'
+
+let g:pymode_lint_ignore = "E111,E114,E121,E501"
 let g:pymode_rope_completion = 0
 let g:pymode_lint_on_write = 1
 let g:pymode_trim_whitespaces = 0
