@@ -109,6 +109,10 @@ Plugin 'mhinz/vim-signify'
 
 Plugin 'Shougo/unite.vim'
 
+Plugin 'mattn/gist-vim'
+
+Plugin 'mattn/webapi-vim'
+
 "Plugin 'marijnh/tern_for_vim'
 
 call vundle#end()
