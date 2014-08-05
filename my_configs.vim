@@ -160,8 +160,6 @@ map <Leader>vs :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 
 "template setting
-let g:email = "info@luxeys.com"
-let g:username = "luxeys"
 au FocusLost * :wa
 autocmd filetype python nnoremap <F5> : <C-U>!python % <CR>
 autocmd filetype r nnoremap <F5> :<C-U>!Rscript % <CR>
