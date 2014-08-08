@@ -113,6 +113,8 @@ Plugin 'mattn/gist-vim'
 
 Plugin 'mattn/webapi-vim'
 
+Plugin 'christoomey/vim-tmux-navigator'
+
 "Plugin 'marijnh/tern_for_vim'
 
 call vundle#end()
