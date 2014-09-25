@@ -29,8 +29,6 @@ Plugin 'scrooloose/syntastic'
 
 Plugin 'majutsushi/tagbar'
 
-"Plugin 'altercation/vim-colors-solarized'
-
 Plugin 'Raimondi/delimitMate'
 
 Plugin 'sigurdga/gnome-terminal-colors-solarized'
@@ -114,6 +112,12 @@ Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
 
 Plugin 'christoomey/vim-tmux-navigator'
+
+Plugin 'tpope/vim-dispatch'
+
+Plugin 'chase/vim-ansible-yaml'
+
+"Plugin 'wlangstroth/vim-racket'
 
 "Plugin 'marijnh/tern_for_vim'
 
