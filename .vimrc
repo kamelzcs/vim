@@ -121,6 +121,8 @@ Plugin 'chase/vim-ansible-yaml'
 
 "Plugin 'marijnh/tern_for_vim'
 
+Plugin 'szw/vim-ctrlspace'
+
 call vundle#end()
 filetype plugin indent on     " required!
 " To ignore plugin indent changes, instead use:

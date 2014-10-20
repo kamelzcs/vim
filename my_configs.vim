@@ -4,21 +4,38 @@ set clipboard=unnamedplus
 set nowrap                      " Do not wrap long lines
 set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
 """""""""""""""""
+"nerdtree
+"“”“”“”“”“”“”“”“
+"close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | end
+" s/v open file
+let g:NERDTreeMapOpenSplit = 's'
+let g:NERDTreeMapOpenVSplit = 'v'
+
+"""""""""""""""""
 "Rainbow
 "“”“”“”“”“”“”“”“
 let g:rbpt_colorpairs = [
-  \ [ '1',  '#dc322f'],
-  \ [ '9',  '#cb4b16'],
-  \ [ '13', '#6c71c4'],
-  \ [ '2',  '#859900'],
-  \ [ '6',  '#2aa198'],
-  \ [ '3',  '#b58900'],
-  \ [ '5',  '#d33682'],
-  \ [ '4',  '#268bd2'],
-  \ ]
+\ ['brown', 'RoyalBlue3'],
+\ ['Darkblue', 'SeaGreen3'],
+\ ['darkgray', 'DarkOrchid3'],
+\ ['darkgreen', 'firebrick3'],
+\ ['darkcyan', 'RoyalBlue3'],
+\ ['darkred', 'SeaGreen3'],
+\ ['darkmagenta', 'DarkOrchid3'],
+\ ['brown', 'firebrick3'],
+\ ['gray', 'RoyalBlue3'],
+\ ['black', 'SeaGreen3'],
+\ ['darkmagenta', 'DarkOrchid3'],
+\ ['Darkblue', 'firebrick3'],
+\ ['darkgreen', 'RoyalBlue3'],
+\ ['darkcyan', 'SeaGreen3'],
+\ ['darkred', 'DarkOrchid3'],
+\ ['red', 'firebrick3'],
+\ ]
 " Nesting level to stop coloring at.
 " This does shift what colors the upper nests will be if changed.
-let g:rbpt_max = 16
+let g:rbpt_max = 40
 " Enable rainbow parentheses for all buffers
 augroup rainbow_parentheses
   au!
@@ -55,6 +72,7 @@ let g:pymode_lint = 0
 let g:pymode_rope_completion = 0
 "let g:pymode_lint_on_write = 1
 let g:pymode_trim_whitespaces = 0
+let g:pymode_motion = 1
 
 "tagbar appears on the left
 let g:tagbar_left=1
