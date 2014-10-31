@@ -61,8 +61,6 @@ Plugin 'SirVer/ultisnips'
 
 Plugin 'honza/vim-snippets'
 
-Plugin 'mru.vim'
-
 Plugin 'plasticboy/vim-markdown'
 
 Plugin 'kien/ctrlp.vim'
@@ -73,7 +71,7 @@ Plugin 'sjl/gundo.vim'
 
 Plugin 'flazz/vim-colorschemes'
 
-Plugin 'bufexplorer.zip'
+Plugin 'jlanzarotta/bufexplorer'
 
 Plugin 'taglist.vim'
 

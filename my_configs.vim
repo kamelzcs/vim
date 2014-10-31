@@ -89,11 +89,14 @@ let g:rainbow_active = 1
 "changed the ~/.vim/bundle/python-mode/after/indent/python.vim: indentkeys No :,shiftwidth=2
 "basic.vim cancled trailing space in python/coffe  deletion
 
+"select all
+map <Leader>sa ggVGy
+
 "for esc
 imap jj <Esc>
 
 "copy current file path to clipboard
-:nmap cp :let @+ = expand("%")<CR>
+:nmap cp :let @+ = expand("%")<CR><CR>
 
 "vmap <C-c> "+y
 "vmap <C-x> "+c
