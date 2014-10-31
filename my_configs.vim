@@ -90,7 +90,7 @@ let g:rainbow_active = 1
 "basic.vim cancled trailing space in python/coffe  deletion
 
 "select all
-map <Leader>sa ggVGy
+map <Leader>sa :%y+<CR>
 
 "for esc
 imap jj <Esc>
