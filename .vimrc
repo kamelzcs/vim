@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Plugin 'gmarik/Vundle.vim'
 
 " My bundles here:
@@ -115,11 +115,13 @@ Plugin 'tpope/vim-dispatch'
 
 Plugin 'chase/vim-ansible-yaml'
 
-"Plugin 'wlangstroth/vim-racket'
-
-"Plugin 'marijnh/tern_for_vim'
-
 Plugin 'szw/vim-ctrlspace'
+
+Plugin 'exu/pgsql.vim'
+
+Plugin 'tpope/vim-sleuth'
+
+Plugin 'sjl/tslime.vim'
 
 call vundle#end()
 filetype plugin indent on     " required!
