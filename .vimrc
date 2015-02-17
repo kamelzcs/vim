@@ -123,6 +123,8 @@ Plugin 'tpope/vim-sleuth'
 
 Plugin 'sjl/tslime.vim'
 
+Plugin 'wlangstroth/vim-racket'
+
 call vundle#end()
 filetype plugin indent on     " required!
 " To ignore plugin indent changes, instead use:
