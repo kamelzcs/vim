@@ -125,6 +125,8 @@ Plugin 'sjl/tslime.vim'
 
 Plugin 'wlangstroth/vim-racket'
 
+Plugin 'junegunn/vim-easy-align'
+
 call vundle#end()
 filetype plugin indent on     " required!
 " To ignore plugin indent changes, instead use:
