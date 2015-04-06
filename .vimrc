@@ -33,7 +33,7 @@ Plugin 'Raimondi/delimitMate'
 
 Plugin 'sigurdga/gnome-terminal-colors-solarized'
 
-"Plugin 'klen/python-mode'
+Plugin 'klen/python-mode'
 
 Plugin 'YankRing.vim'
 

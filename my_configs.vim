@@ -83,6 +83,7 @@ let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_flake8_args='--ignore=E111,E114,E121,E501'
 
+let g:pymode_rope = 0
 let g:pymode_lint = 0
 "let g:pymode_lint_ignore = "E111,E114,E121,E501"
 let g:pymode_rope_completion = 0
