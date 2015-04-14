@@ -204,6 +204,7 @@ autocmd filetype python nnoremap <F5> : <C-U>!python % <CR>
 autocmd filetype r nnoremap <F5> :<C-U>!Rscript % <CR>
 autocmd filetype c nnoremap <F5> :<C-U>make %:r && ./%:r<CR>
 autocmd filetype cpp nnoremap <F5> :<C-U>!g++ -Wall -g -std=c++0x % -o %:r && ./%:r<CR>
+autocmd filetype haskell nnoremap <F5> :<C-U>!ghc % -o %:r && ./%:r<CR>
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
