@@ -127,6 +127,16 @@ Plugin 'wlangstroth/vim-racket'
 
 Plugin 'junegunn/vim-easy-align'
 
+"Plugin 'haskell-vim'
+
+Plugin 'dag/vim2hs'
+
+Plugin 'Shougo/vimproc.vim'
+
+Plugin 'eagletmt/ghcmod-vim'
+
+Plugin 'eagletmt/neco-ghc'
+
 call vundle#end()
 filetype plugin indent on     " required!
 " To ignore plugin indent changes, instead use:
