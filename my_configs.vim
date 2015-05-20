@@ -213,7 +213,7 @@ set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 set list
 set scrolloff=3                 " Minimum lines to keep above and below curso
 "This unsets the "last search pattern" register by hitting return
-nnoremap <CR> :noh<CR><CR>
+nnoremap <CR> :noh<CR>
 nnoremap <Leader>u :GundoToggle<CR>
 let g:Powerline_symbols = 'fancy'
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
@@ -255,3 +255,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
         nmap <Leader>a<Bar> :Tabularize /<Bar><CR>
         vmap <Leader>a<Bar> :Tabularize /<Bar><CR>
 " }
+
+let g:haskell_conceal_wide = 1
+let g:ycm_semantic_triggers = {'haskell' : ['.']}
