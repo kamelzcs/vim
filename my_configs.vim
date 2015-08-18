@@ -180,6 +180,7 @@ map <leader>h :cd <c-r>=GetRepoPath()<cr><cr>
 
 "Auto haskell type inference
 map <leader>k :GhcModType <cr>
+autocmd filetype haskell nnoremap <leader>kk :GhcModTypeClear <cr>
 
 " Open ack and put the cursor in the right position
 map <leader>g :Ack   <C-R>=GetRepoPath()<CR><C-A><right><right><right><right>
@@ -217,7 +218,6 @@ set list
 set scrolloff=3                 " Minimum lines to keep above and below curso
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR>
-autocmd filetype haskell nnoremap <CR> :GhcModTypeClear<CR>
 nnoremap <Leader>u :GundoToggle<CR>
 let g:Powerline_symbols = 'fancy'
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
