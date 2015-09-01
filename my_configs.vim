@@ -217,7 +217,7 @@ set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 set list
 set scrolloff=3                 " Minimum lines to keep above and below curso
 "This unsets the "last search pattern" register by hitting return
-nnoremap <CR> :noh<CR>
+nnoremap <CR> :noh<CR><CR>
 nnoremap <Leader>u :GundoToggle<CR>
 let g:Powerline_symbols = 'fancy'
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
