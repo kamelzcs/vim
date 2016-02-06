@@ -130,7 +130,6 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
-" 语法关键字补全
 let g:ycm_seed_identifiers_with_syntax=1
 
 let g:UltiSnipsJumpForwardTrigger="<tab>"
@@ -162,18 +161,6 @@ function! GetRepoPath()
     let path = system("git rev-parse --show-toplevel")
     return path[:-2]
 endfunction
-
-function! GetPcOrSmartFile()
-    let nowPath = expand("%:p")
-    if nowPath =~ "pc"
-        let newPath = substitute(nowPath, "pc", "smart", "")
-    else
-        let newPath = substitute(nowPath, "smart", "pc", "")
-    endif
-    return newPath
-endfunction
-
-map <leader>jp :tabedit <c-r>=GetPcOrSmartFile()<cr><cr>
 
 "change to root the of the repo
 map <leader>h :cd <c-r>=GetRepoPath()<cr><cr>
