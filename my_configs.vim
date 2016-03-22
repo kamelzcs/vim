@@ -1,6 +1,6 @@
 set nu
 set relativenumber
-set clipboard=unnamedplus
+set clipboard=unnamed
 set nowrap                      " Do not wrap long lines
 set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
 """""""""""""""""

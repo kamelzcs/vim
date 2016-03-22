@@ -25,7 +25,7 @@ Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'scrooloose/nerdtree'
 
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 
 Plugin 'majutsushi/tagbar'
 
@@ -157,8 +157,10 @@ source ~/vimConf/vimrcs/extended.vim
 source ~/vimConf/my_configs.vim
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 syntax enable
-set t_Co=16
-set background=dark
-let g:solarized_termcolors=16
-let g:solarized_contrast="high"
 colorscheme solarized
+set background=dark
+set encoding=utf-8
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+set termencoding=utf-8
