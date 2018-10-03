@@ -1,4 +1,5 @@
 set nocompatible              " be iMproved
+set hidden
 filetype off                  " required!
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -150,15 +151,24 @@ filetype plugin indent on     " required!
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-source ~/vimConf/vimrcs/basic.vim
-source ~/vimConf/vimrcs/filetypes.vim
-source ~/vimConf/vimrcs/plugins_config.vim
-source ~/vimConf/vimrcs/extended.vim
-source ~/vimConf/my_configs.vim
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+"source ~/vimConf/vimrcs/basic.vim
+"source ~/vimConf/vimrcs/filetypes.vim
+"source ~/vimConf/vimrcs/plugins_config.vim
+"source ~/vimConf/vimrcs/extended.vim
+"source ~/vimConf/my_configs.vim
+"let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 syntax enable
 set t_Co=16
 set background=dark
 let g:solarized_termcolors=16
 let g:solarized_contrast="high"
 colorscheme solarized
+
+" yank to clipboard
+if has("clipboard")
+  set clipboard=unnamed " copy to the system clipboard
+
+  if has("unnamedplus") " X11 support
+    set clipboard+=unnamedplus
+  endif
+endif
